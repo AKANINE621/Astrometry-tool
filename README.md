@@ -1,44 +1,41 @@
 # ⭐ Star Astrometr
 
-**Star Astrometr** is an open-source Python 3 tool for performing basic astrometric analysis from `.fits` (Flexible Image Transport System) images. It automatically detects stars and generates three types of visualizations: heatmap, histogram, and scatter plot.
-
-## 📌 Overview
-
-Star Astrometr is designed for amateur and professional astronomers who want to extract positional and brightness data from astronomical images. It helps users analyze star distributions and intensity patterns efficiently using Python-based plotting.
+**Star Astrometr** is an open-source Python 3 application that processes `.fits` files and generates astrometric visualizations. The program supports three types of plots: **scatter plot**, **histogram**, and **heatmap**, all based on detected star coordinates using WCS (World Coordinate System).
 
 ---
 
-## ✨ Features
+## 📸 What It Does
 
-- ✅ Input: `.fits` image files
-- ✅ Output: three types of plots
-  - 🌡️ **Heatmap** — star density visualization
-  - 📊 **Histogram** — pixel brightness distribution
-  - 🌌 **Scatter Plot** — star positions in 2D space
-- ✅ Cross-platform: Works on Windows, Linux, and macOS
-- ✅ Lightweight and easy to use
-- ✅ Open source (MIT License)
+- Loads `.fits` images from a folder
+- Randomly samples star-like pixel coordinates
+- Transforms pixel positions to WCS (RA/DEC)
+- Generates:
+  - 🌌 **Scatter Plot** of star positions
+  - 📊 **Histogram** of RA and DEC distributions
+  - 🌡️ **Heatmap** of raw FITS image intensity
 
 ---
 
-## 🧰 Installation
+## 📦 Installation
 
-### 📦 Requirements
+### ⚙️ Requirements
 
-- Python **3.8 or newer**
-- pip package manager
+- Python 3.8+
+- pip
 
-### 🔧 Install on Windows / macOS / Linux
+### 🖥️ Windows / 🐧 Linux / 🍎 macOS
 
 ```bash
 # Clone the repository
 git clone https://github.com/AKANINE621/Star-Astromet.git
 cd star-astrometr
 
-# Create virtual environment (optional but recommended)
+# (Optional) Create and activate a virtual environment
 python -m venv venv
-source venv/bin/activate   # Linux / macOS
-venv\Scripts\activate      # Windows
+# On Windows
+venv\Scripts\activate
+# On macOS/Linux
+source venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
